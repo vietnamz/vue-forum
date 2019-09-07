@@ -1,0 +1,11 @@
+const characters = [
+    {  name : 'Batman', badGuy : false },
+    {  name : 'Darth Vader', badGuy : true},
+    {  name : 'Gru', badGuy : true},
+    {  name : 'Guybrush Threepwood', badGuy: false},
+    {  name : 'Buttercup', badGuy : false}
+]
+
+
+fetchResource = (resource, id) => fetch(`api/${resource},${id}`)
+makeFetcher = resource => id => fetchResouce(resource, id)
