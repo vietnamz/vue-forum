@@ -13,13 +13,13 @@ Vue.config.productionTip = false
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyCIH88B46EmohDqgmE_nUyofNoc2P-UC_I',
-  authDomain: 'vue-school-forum-3c1de.firebaseapp.com',
-  databaseURL: 'https://vue-school-forum-3c1de.firebaseio.com',
-  projectId: 'vue-school-forum-3c1de',
-  storageBucket: '',
-  messagingSenderId: '148040775700',
-  appId: '1:148040775700:web:deeefe8ee9de1cc1f08f01'
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_ID,
+  appId: process.env.FIREBASE_APP_ID
 }
 // Initialize Firebase
 console.log(firebaseConfig)
