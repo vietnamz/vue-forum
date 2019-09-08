@@ -59,17 +59,20 @@
         type: Object
       }
     },
-    computed: {
-      userThreadCount () {
-        return this.$store.getters.userThreadCount(this.user['.key'])
-      },
-      userPostCount () {
-        return this.$store.getters.userPostCount(this.user['.key'])
-      }
-    },
+
     data () {
       return {
         activeUser: {...this.user}
+      }
+    },
+
+    computed: {
+      userThreadsCount () {
+        return this.$store.getters.userThreadsCount(this.user['.key'])
+      },
+
+      userPostsCount () {
+        return this.$store.getters.userPostsCount(this.user['.key'])
       }
     },
 
@@ -78,6 +81,7 @@
         this.$store.dispatch('updateUser', {...this.activeUser})
         this.$router.push({name: 'Profile'})
       },
+
       cancel () {
         this.$router.push({name: 'Profile'})
       }
